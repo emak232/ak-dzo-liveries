@@ -449,7 +449,6 @@ footer{
   <!-- MENU BUTTON -->
   <div class="social-btn" onclick="toggleSocial()">☰</div>
 
-  <!-- ✅ ADD THIS (YOU MISSED THIS) -->
   <div class="social-menu" id="socialMenu">
     <a href="https://youtube.com/@EDITMASTERAK" target="_blank">YouTube</a>
     <a href="https://instagram.com/editmasterak" target="_blank">Instagram</a>
@@ -462,30 +461,36 @@ footer{
 
 <div class="container">
 
-<!-- ALL YOUR CARS REMAIN SAME -->
-
 <div class="card">
   <h2>Koenigsegg Regera</h2>
 
-  <!-- SLOT BUTTONS -->
   <div class="slot-buttons">
     <span class="dot active" onclick="switchRegeraSlot(this,1)"></span>
     <span class="dot" onclick="switchRegeraSlot(this,2)"></span>
   </div>
 
   <div class="image-box"
+    data-img1="img/regera1.jpg"
+    data-img2="img/regera2.jpg"
     data-a1="img/regera1.jpg"
     data-a2="img/regera2.jpg"
     data-b1="img/regera3.jpg"
     data-b2="img/regera4.jpg">
 
     <span class="arrow left" onclick="switchImg(this)">‹</span>
-    <img src="img/regera1.jpg">
+    <img src="img/regera1.jpg" loading="lazy" decoding="async">
     <span class="arrow right" onclick="switchImg(this)">›</span>
   </div>
 </div>
 
-<div class="card"><h2>Bugatti Chiron</h2><div class="image-box" data-img1="img/Bugatti1.jpg" data-img2="img/Bugatti2.jpg"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/Bugatti1.jpg"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
+<div class="card">
+  <h2>Bugatti Chiron</h2>
+  <div class="image-box" data-img1="img/Bugatti1.jpg" data-img2="img/Bugatti2.jpg">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/Bugatti1.jpg" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
+</div>
 
 <div class="card">
   <h2>Porsche 918 Spyder</h2>
@@ -495,14 +500,16 @@ footer{
     <span class="dot" onclick="switch918(this,2)"></span>
   </div>
 
-<div class="image-box"
-  data-a1="img/918spyder1.jpg"
-  data-a2="img/918spyder2.jpg"
-  data-b1="img/918spyder3.jpg"
-  data-b2="img/918spyder4.jpg">
+  <div class="image-box"
+    data-img1="img/918spyder1.jpg"
+    data-img2="img/918spyder2.jpg"
+    data-a1="img/918spyder1.jpg"
+    data-a2="img/918spyder2.jpg"
+    data-b1="img/918spyder3.jpg"
+    data-b2="img/918spyder4.jpg">
 
     <span class="arrow left" onclick="switchImg(this)">‹</span>
-    <img src="img/918spyder1.jpg">
+    <img src="img/918spyder1.jpg" loading="lazy">
     <span class="arrow right" onclick="switchImg(this)">›</span>
   </div>
 </div>
@@ -510,75 +517,152 @@ footer{
 <div class="card">
   <h2>Acura NSX</h2>
 
-  <!-- SLOT BUTTONS -->
   <div class="slot-buttons">
     <span class="dot active" onclick="switchNSX(this,1)"></span>
     <span class="dot" onclick="switchNSX(this,2)"></span>
   </div>
 
   <div class="image-box"
+    data-img1="img/nsx1.jpg"
+    data-img2="img/nsx2.jpg"
     data-a1="img/nsx1.jpg"
     data-a2="img/nsx2.jpg"
     data-b1="img/nsx3.jpg"
     data-b2="img/nsx4.jpg">
 
     <span class="arrow left" onclick="switchImg(this)">‹</span>
-    <img src="img/nsx1.jpg">
+    <img src="img/nsx1.jpg" loading="lazy">
     <span class="arrow right" onclick="switchImg(this)">›</span>
   </div>
 </div>
 
-<div class="card"><h2>Aston Martin Vantage</h2><div class="image-box" data-img1="img/am1.jpg" data-img2="img/am2.jpg"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/am1.jpg"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
+<div class="card">
+  <h2>Aston Martin Vantage</h2>
+  <div class="image-box" data-img1="img/am1.jpg" data-img2="img/am2.jpg">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/am1.jpg" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
+</div>
 
 <div class="card">
   <h2>Lamborghini Huracan</h2>
 
-  <!-- SLOT BUTTONS -->
   <div class="slot-buttons">
     <span class="dot active" onclick="switchSlot(this,1)"></span>
     <span class="dot" onclick="switchSlot(this,2)"></span>
   </div>
 
   <div class="image-box"
-       data-slot="1"
-data-img1="img/lambo3.jpg"
-data-img2="img/lambo4.jpg"
-data-img3="img/lambo1.jpg"
-data-img4="img/lambo2.jpg">
+    data-img1="img/lambo3.jpg"
+    data-img2="img/lambo4.jpg"
+    data-img3="img/lambo1.jpg"
+    data-img4="img/lambo2.jpg">
 
     <span class="arrow left" onclick="switchImg(this)">‹</span>
-   <img src="img/lambo3.jpg">
+    <img src="img/lambo3.jpg" loading="lazy">
     <span class="arrow right" onclick="switchImg(this)">›</span>
   </div>
 </div>
 
-<div class="card"><h2>Dodge Viper</h2><div class="image-box" data-img1="img/viper1.jpg" data-img2="img/viper2.jpg"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/viper1.jpg"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
 
-<div class="card"><h2>Nissan GTR R34</h2><div class="image-box" data-img1="img/gtr341.jpg" data-img2="img/gtr342.jpg"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/gtr341.jpg"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
+<div class="card">
+  <h2>Dodge Viper</h2>
+  <div class="image-box" data-img1="img/viper1.jpg" data-img2="img/viper2.jpg">
+    <img src="img/viper1.jpg" loading="lazy">
+  </div>
+</div>
 
-<div class="card"><h2>Mitsubishi Lancer</h2><div class="image-box" data-img1="img/m1.jpg" data-img2="img/m2.jpg"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/m1.jpg"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
+<div class="card">
+  <h2>Nissan GTR R34</h2>
+  <div class="image-box" data-img1="img/gtr341.jpg" data-img2="img/gtr342.jpg">
+    <img src="img/gtr341.jpg" loading="lazy">
+  </div>
+</div>
 
-<div class="card"><h2>Toyota Supra Mk5</h2><div class="image-box" data-img1="img/supramk5.jpg" data-img2="img/supramk52.jpg"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/supramk5.jpg"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
+<div class="card">
+  <h2>Mitsubishi Lancer</h2>
+  <div class="image-box" data-img1="img/m1.jpg" data-img2="img/m2.jpg">
+    <img src="img/m1.jpg" loading="lazy">
+  </div>
+</div>
 
-<div class="card"><h2>BMW M4</h2><div class="image-box" data-img1="img/m41.jpg" data-img2="img/m42.jpg"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/m41.jpg"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
+<div class="card">
+  <h2>Toyota Supra Mk5</h2>
+  <div class="image-box" data-img1="img/supramk5.jpg" data-img2="img/supramk52.jpg">
+    <img src="img/supramk5.jpg" loading="lazy">
+  </div>
+</div>
 
-<div class="card"><h2>Toyota Supra Mk4</h2><div class="image-box" data-img1="img/mk41.jpg" data-img2="img/mk42.jpg"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/mk41.jpg"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
+<div class="card">
+  <h2>BMW M4</h2>
+  <div class="image-box" data-img1="img/m41.jpg" data-img2="img/m42.jpg">
+    <img src="img/m41.jpg" loading="lazy">
+  </div>
+</div>
 
-<div class="card"><h2>BMW M5</h2><div class="image-box" data-img1="img/m51.jpg" data-img2="img/m52.jpg"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/m51.jpg"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
+<div class="card">
+  <h2>Toyota Supra Mk4</h2>
+  <div class="image-box" data-img1="img/mk41.jpg" data-img2="img/mk42.jpg">
+    <img src="img/mk41.jpg" loading="lazy">
+  </div>
+</div>
 
-<div class="card"><h2>Porsche Cayman</h2><div class="image-box" data-img1="img/cayman1.jpg" data-img2="img/cayman2.jpg"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/cayman1.jpg"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
+<div class="card">
+  <h2>BMW M5</h2>
+  <div class="image-box" data-img1="img/m51.jpg" data-img2="img/m52.jpg">
+    <img src="img/m51.jpg" loading="lazy">
+  </div>
+</div>
 
-<div class="card"><h2>Ford Mustang GT</h2><div class="image-box" data-img1="img/mustang1.jpg" data-img2="img/mustang2.jpg"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/mustang1.jpg"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
+<div class="card">
+  <h2>Porsche Cayman</h2>
+  <div class="image-box" data-img1="img/cayman1.jpg" data-img2="img/cayman2.jpg">
+    <img src="img/cayman1.jpg" loading="lazy">
+  </div>
+</div>
 
-<div class="card"><h2>Dodge Charger</h2><div class="image-box" data-img1="img/charger1.jpg" data-img2="img/charger2.jpg"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/charger1.jpg"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
+<div class="card">
+  <h2>Ford Mustang GT</h2>
+  <div class="image-box" data-img1="img/mustang1.jpg" data-img2="img/mustang2.jpg">
+    <img src="img/mustang1.jpg" loading="lazy">
+  </div>
+</div>
 
-<div class="card"><h2>Nissan GTR R35</h2><div class="image-box" data-img1="img/gtr1.png" data-img2="img/gtr2.png"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/gtr1.png"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
+<div class="card">
+  <h2>Dodge Charger</h2>
+  <div class="image-box" data-img1="img/charger1.jpg" data-img2="img/charger2.jpg">
+    <img src="img/charger1.jpg" loading="lazy">
+  </div>
+</div>
 
-<div class="card"><h2>Mercedes AMG GT</h2><div class="image-box" data-img1="img/amg1.jpg" data-img2="img/amg2.jpg"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/amg1.jpg"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
+<div class="card">
+  <h2>Nissan GTR R35</h2>
+  <div class="image-box" data-img1="img/gtr1.png" data-img2="img/gtr2.png">
+    <img src="img/gtr1.png" loading="lazy">
+  </div>
+</div>
 
-<div class="card"><h2>Mercedes G Wagon</h2><div class="image-box" data-img1="img/g1.jpg" data-img2="img/g2.jpg"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/g1.jpg"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
+<div class="card">
+  <h2>Mercedes AMG GT</h2>
+  <div class="image-box" data-img1="img/amg1.jpg" data-img2="img/amg2.jpg">
+    <img src="img/amg1.jpg" loading="lazy">
+  </div>
+</div>
 
-<div class="card"><h2>Rolls Royce Ghost</h2><div class="image-box" data-img1="img/rr1.jpg" data-img2="img/rr2.jpg"><span class="arrow left" onclick="switchImg(this)">‹</span><img src="img/rr1.jpg"><span class="arrow right" onclick="switchImg(this)">›</span></div></div>
+<div class="card">
+  <h2>Mercedes G Wagon</h2>
+  <div class="image-box" data-img1="img/g1.jpg" data-img2="img/g2.jpg">
+    <img src="img/g1.jpg" loading="lazy">
+  </div>
+</div>
+
+<div class="card">
+  <h2>Rolls Royce Ghost</h2>
+  <div class="image-box" data-img1="img/rr1.jpg" data-img2="img/rr2.jpg">
+    <img src="img/rr1.jpg" loading="lazy">
+  </div>
+</div>
 
 </div>
 
@@ -602,21 +686,25 @@ function toggleSocial(){
   document.getElementById("socialMenu").classList.toggle("active");
 }
 
-/* ✅ FIXED IMAGE SWITCH */
 function switchImg(btn){
- let box = btn.parentElement;
- let img = box.querySelector("img");
+  let box = btn.parentElement;
+  let img = box.querySelector("img");
 
- let img1 = box.dataset.img1;
- let img2 = box.dataset.img2;
+  let img1 = box.dataset.img1;
+  let img2 = box.dataset.img2;
 
- img.style.opacity = 0;
+  img.style.opacity = 0;
 
- setTimeout(()=>{
-   img.src = img.src.includes(img1) ? img2 : img1;
-   img.style.opacity = 1;
- },150);
+  setTimeout(()=>{
+    if(img.src.endsWith(img1)){
+      img.src = img2;
+    } else {
+      img.src = img1;
+    }
+    img.style.opacity = 1;
+  },150);
 }
+
 
 /* ✅ SLOT SWITCH */
 function switchSlot(dot, slot){
