@@ -1,6 +1,13 @@
 <!DOCTYPE html> 
 <html lang="en">
 <head>
+<!-- 🔥 EMBED / LINK PREVIEW -->
+<meta property="og:title" content="AK's Custom Liveries 🚗🔥">
+<meta property="og:description" content="Explore premium custom cars liveries by EDIT MASTER AK. High quality designs for your favorite cars.">
+<meta property="og:image" content="https://emak232/img/AK logo.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/AK logo.png">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -71,9 +78,7 @@ header h1{
 }
 
 .card{
-  opacity:0;
-  transform:translateY(30px);
-  transition:0.6s ease;
+  transition:transform 0.4s ease, opacity 0.4s ease;
 }
 
 /* ✅ KEEP CARD RELATIVE */
@@ -126,7 +131,10 @@ body{
   color:white;
   background:linear-gradient(270deg,#2b0000,#5a0000,#8b0000,#2b0000);
   background-size:800% 800%;
-  animation:gradientMove 12s ease infinite;
+  body{
+  background:linear-gradient(270deg,#2b0000,#5a0000,#8b0000,#2b0000);
+  background-size:400% 400%;
+}
 }
 
 /* BG */
@@ -157,7 +165,7 @@ header{
 
   /* 🔥 LIQUID GLASS BLACK */
   background:rgba(10,10,10,0.5);
-  backdrop-filter:blur(20px) saturate(180%);
+  backdrop-filter:blur(8px) saturate(180%);
   -webkit-backdrop-filter:blur(20px) saturate(180%);
 
   /* subtle glass border */
@@ -437,6 +445,132 @@ footer{
   }
 }
 
+/* ===== FULLSCREEN PREVIEW ===== */
+.fullscreen-view{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+
+  /* 🔥 lighter background (remove heavy blur) */
+  background:rgba(0,0,0,0.92);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  opacity:0;
+  pointer-events:none;
+
+  transition:opacity 0.25s ease;
+
+  z-index:99999;
+
+  /* GPU boost */
+  will-change: opacity;
+}
+
+.fullscreen-view.active{
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* IMAGE */
+.fullscreen-view img{
+  max-width:90%;
+  max-height:85%;
+  border-radius:16px;
+
+  /* 🔥 GPU animation */
+  transform:scale(0.85) translateZ(0);
+  transition:transform 0.25s cubic-bezier(0.22,1,0.36,1);
+
+  box-shadow:0 20px 60px rgba(0,0,0,0.8);
+
+  will-change: transform;
+}
+
+.fullscreen-view.active img{
+  transform:scale(1) translateZ(0);
+}
+
+/* CLOSE BUTTON */
+.close-btn{
+  position:absolute;
+  top:20px;
+  right:25px;
+  font-size:28px;
+  color:white;
+  cursor:pointer;
+
+  background:rgba(0,0,0,0.6);
+  padding:6px 12px;
+  border-radius:10px;
+
+  transition:0.2s ease;
+}
+
+.close-btn:hover{
+  background:red;
+}
+
+.fullscreen-view img{
+  image-rendering:auto;
+  backface-visibility:hidden;
+}
+
+.card,
+.image-box img,
+.fullscreen-view img,
+header,
+.social-menu{
+  transform:translateZ(0);
+  will-change:transform, opacity;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  overscroll-behavior:none;
+}
+
+/* 🔥 GPU + SMOOTH BASE */
+*{
+  -webkit-tap-highlight-color: transparent;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  overscroll-behavior:none;
+}
+
+/* GPU boost */
+.card,
+.image-box img,
+header,
+.social-menu,
+.footer-glass{
+  transform:translateZ(0);
+  will-change:transform, opacity;
+}
+
+@media (max-width:600px){
+  .card:hover{
+    transform:none;
+    box-shadow:none;
+  }
+
+  .image-box img{
+    transform:none !important;
+  }
+}
+
 </style>
 </head>
 
@@ -565,36 +699,133 @@ footer{
   </div>
 </div>
 
-<div class="card"><h2>Dodge Viper</h2><div class="image-box" data-img1="img/viper1.webp" data-img2="img/viper2.webp"><img src="img/viper1.webp" loading="lazy"></div></div>
-
-<div class="card"><h2>Nissan GTR R34</h2><div class="image-box" data-img1="img/gtr341.webp" data-img2="img/gtr342.webp"><img src="img/gtr341.webp" loading="lazy"></div></div>
-
-<div class="card"><h2>Mitsubishi Lancer</h2><div class="image-box" data-img1="img/m1.webp" data-img2="img/m2.webp"><img src="img/m1.webp" loading="lazy"></div></div>
-
-<div class="card"><h2>Toyota Supra Mk5</h2><div class="image-box" data-img1="img/supramk5.webp" data-img2="img/supramk52.webp"><img src="img/supramk5.webp" loading="lazy"></div></div>
-
-<div class="card"><h2>BMW M4</h2><div class="image-box" data-img1="img/m41.webp" data-img2="img/m42.webp"><img src="img/m41.webp" loading="lazy"></div></div>
-
-<div class="card"><h2>Toyota Supra Mk4</h2><div class="image-box" data-img1="img/mk41.webp" data-img2="img/mk42.webp"><img src="img/mk41.webp" loading="lazy"></div></div>
-
-<div class="card"><h2>BMW M5</h2><div class="image-box" data-img1="img/m51.webp" data-img2="img/m52.webp"><img src="img/m51.webp" loading="lazy"></div></div>
-
-<div class="card"><h2>Porsche Cayman</h2><div class="image-box" data-img1="img/cayman1.webp" data-img2="img/cayman2.webp"><img src="img/cayman1.webp" loading="lazy"></div></div>
-
-<div class="card"><h2>Ford Mustang GT</h2><div class="image-box" data-img1="img/mustang1.webp" data-img2="img/mustang2.webp"><img src="img/mustang1.webp" loading="lazy"></div></div>
-
-<div class="card"><h2>Dodge Charger</h2><div class="image-box" data-img1="img/charger1.webp" data-img2="img/charger2.webp"><img src="img/charger1.webp" loading="lazy"></div></div>
-
-<div class="card"><h2>Nissan GTR R35</h2><div class="image-box" data-img1="img/gtr1.webp" data-img2="img/gtr2.webp"><img src="img/gtr1.webp" loading="lazy"></div></div>
-
-<div class="card"><h2>Mercedes AMG GT</h2><div class="image-box" data-img1="img/amg1.webp" data-img2="img/amg2.webp"><img src="img/amg1.webp" loading="lazy"></div></div>
-
-<div class="card"><h2>Mercedes G Wagon</h2><div class="image-box" data-img1="img/g1.webp" data-img2="img/g2.webp"><img src="img/g1.webp" loading="lazy"></div></div>
-
-<div class="card"><h2>Rolls Royce Ghost</h2><div class="image-box" data-img1="img/rr1.webp" data-img2="img/rr2.webp"><img src="img/rr1.webp" loading="lazy"></div></div>
-
+<div class="card">
+  <h2>Dodge Viper</h2>
+  <div class="image-box" data-img1="img/viper1.webp" data-img2="img/viper2.webp">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/viper1.webp" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
 </div>
 
+<div class="card">
+  <h2>Nissan GTR R34</h2>
+  <div class="image-box" data-img1="img/gtr341.webp" data-img2="img/gtr342.webp">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/gtr341.webp" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Mitsubishi Lancer</h2>
+  <div class="image-box" data-img1="img/m1.webp" data-img2="img/m2.webp">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/m1.webp" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Toyota Supra Mk5</h2>
+  <div class="image-box" data-img1="img/supramk5.webp" data-img2="img/supramk52.webp">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/supramk5.webp" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>BMW M4</h2>
+  <div class="image-box" data-img1="img/m41.webp" data-img2="img/m42.webp">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/m41.webp" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Toyota Supra Mk4</h2>
+  <div class="image-box" data-img1="img/mk41.webp" data-img2="img/mk42.webp">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/mk41.webp" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>BMW M5</h2>
+  <div class="image-box" data-img1="img/m51.webp" data-img2="img/m52.webp">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/m51.webp" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Porsche Cayman</h2>
+  <div class="image-box" data-img1="img/cayman1.webp" data-img2="img/cayman2.webp">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/cayman1.webp" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Ford Mustang GT</h2>
+  <div class="image-box" data-img1="img/mustang1.webp" data-img2="img/mustang2.webp">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/mustang1.webp" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Dodge Charger</h2>
+  <div class="image-box" data-img1="img/charger1.webp" data-img2="img/charger2.webp">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/charger1.webp" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Nissan GTR R35</h2>
+  <div class="image-box" data-img1="img/gtr1.webp" data-img2="img/gtr2.webp">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/gtr1.webp" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Mercedes AMG GT</h2>
+  <div class="image-box" data-img1="img/amg1.webp" data-img2="img/amg2.webp">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/amg1.webp" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Mercedes G Wagon</h2>
+  <div class="image-box" data-img1="img/g1.webp" data-img2="img/g2.webp">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/g1.webp" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Rolls Royce Ghost</h2>
+  <div class="image-box" data-img1="img/rr1.webp" data-img2="img/rr2.webp">
+    <span class="arrow left" onclick="switchImg(this)">‹</span>
+    <img src="img/rr1.webp" loading="lazy">
+    <span class="arrow right" onclick="switchImg(this)">›</span>
+  </div>
+</div>
+
+</div>
 
 <footer>
   <div class="footer-glass glass-box">
@@ -743,7 +974,53 @@ footer.addEventListener("mousemove", (e) => {
   footer.style.setProperty("--y", y + "%");
 });
 
+// OPEN FULLSCREEN
+document.querySelectorAll(".image-box img").forEach(img=>{
+  img.addEventListener("click", ()=>{
+    const viewer = document.getElementById("fullscreenView");
+    const fullImg = document.getElementById("fullscreenImg");
+
+    // preload trick = smoother open
+    const temp = new Image();
+    temp.src = img.src;
+
+    temp.onload = () => {
+      fullImg.src = temp.src;
+
+      requestAnimationFrame(()=>{
+        viewer.classList.add("active");
+      });
+    };
+  });
+});
+
+// CLOSE FUNCTION
+function closeFullscreen(){
+  document.getElementById("fullscreenView").classList.remove("active");
+}
+
+// CLOSE ON OUTSIDE CLICK
+document.getElementById("fullscreenView").addEventListener("click", (e)=>{
+  if(e.target.id === "fullscreenView"){
+    closeFullscreen();
+  }
+});
+
+// CLOSE WITH ESC KEY
+document.addEventListener("keydown", (e)=>{
+  if(e.key === "Escape"){
+    closeFullscreen();
+  }
+});
+
+
+
 </script>
+
+<div class="fullscreen-view" id="fullscreenView">
+  <span class="close-btn" onclick="closeFullscreen()">✕</span>
+  <img id="fullscreenImg">
+</div>
 
 </body>
 </html>
