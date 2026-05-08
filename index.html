@@ -571,6 +571,25 @@ header,
   }
 }
 
+/* 🚫 Anti Copy + Anti Drag */
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+body {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Disable text highlight */
+::selection {
+  background: transparent;
+}
+  
 </style>
 </head>
 
@@ -1013,7 +1032,52 @@ document.addEventListener("keydown", (e)=>{
   }
 });
 
+// 🚫 Anti Inspect Protection
 
+// Disable right click
+document.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+});
+
+// Disable inspect shortcuts
+document.addEventListener("keydown", (e) => {
+
+  // F12
+  if (e.key === "F12") {
+    e.preventDefault();
+  }
+
+  // Ctrl+Shift+I
+  if (e.ctrlKey && e.shiftKey && e.key === "I") {
+    e.preventDefault();
+  }
+
+  // Ctrl+Shift+J
+  if (e.ctrlKey && e.shiftKey && e.key === "J") {
+    e.preventDefault();
+  }
+
+  // Ctrl+U
+  if (e.ctrlKey && e.key.toLowerCase() === "u") {
+    e.preventDefault();
+  }
+
+  // Ctrl+C
+  if (e.ctrlKey && e.key.toLowerCase() === "c") {
+    e.preventDefault();
+  }
+
+  // Ctrl+S
+  if (e.ctrlKey && e.key.toLowerCase() === "s") {
+    e.preventDefault();
+  }
+
+});
+
+// Disable image dragging
+document.addEventListener("dragstart", (e) => {
+  e.preventDefault();
+});
 
 </script>
 
