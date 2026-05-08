@@ -591,6 +591,18 @@ body {
 }
   
 </style>
+
+  <!-- 🚀 Performance + Cache Optimization -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+<meta http-equiv="Cache-Control" content="public, max-age=31536000">
+<meta http-equiv="Expires" content="31536000">
+  
 </head>
 
 <body>
@@ -1086,5 +1098,12 @@ document.addEventListener("dragstart", (e) => {
   <img id="fullscreenImg">
 </div>
 
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("Service Worker Registered"));
+}
+</script>
+  
 </body>
 </html>
