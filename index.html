@@ -757,23 +757,29 @@ body {
 </div>
 
 <div class="card">
-  <h2>Toyota Supra Mk5</h2>
+  <h2>Toyota Supra Mk4</h2>
 
   <div class="slot-buttons">
-    <span class="dot active" onclick="switchNSX(this,1)"></span>
-    <span class="dot" onclick="switchNSX(this,2)"></span>
+    <span class="dot active" onclick="switchMK4(this,1)"></span>
+    <span class="dot" onclick="switchMK4(this,2)"></span>
   </div>
 
   <div class="image-box"
     data-img1="img/mk41.webp"
     data-img2="img/mk42.webp"
+
+    <!-- SECTION 1 -->
     data-a1="img/mk41.webp"
     data-a2="img/mk42.webp"
+
+    <!-- SECTION 2 -->
     data-b1="img/mk43.webp"
     data-b2="img/mk44.webp">
 
     <span class="arrow left" onclick="switchImg(this)">‹</span>
-    <img src="img/nsx1.webp" loading="lazy">
+
+    <img src="img/mk41.webp" loading="lazy" decoding="async">
+
     <span class="arrow right" onclick="switchImg(this)">›</span>
   </div>
 </div>
@@ -981,6 +987,39 @@ function switch918(dot, slot){
     img.style.opacity = 1;
 }
 
+  function switchMK4(dot, slot){
+  let card = dot.closest(".card");
+  let box = card.querySelector(".image-box");
+  let img = box.querySelector("img");
+
+  // active dot
+  card.querySelectorAll(".dot").forEach(d=>{
+    d.classList.remove("active");
+  });
+
+  dot.classList.add("active");
+
+  img.style.opacity = 0;
+
+  requestAnimationFrame(()=>{
+
+    if(slot === 1){
+      box.dataset.img1 = box.dataset.a1;
+      box.dataset.img2 = box.dataset.a2;
+      img.src = box.dataset.a1;
+    } else {
+      box.dataset.img1 = box.dataset.b1;
+      box.dataset.img2 = box.dataset.b2;
+      img.src = box.dataset.b1;
+    }
+
+    img.onload = () => {
+      img.style.opacity = 1;
+    };
+
+  });
+  }
+  
 function switchNSX(dot, slot){
   let card = dot.closest(".card");
   let box = card.querySelector(".image-box");
